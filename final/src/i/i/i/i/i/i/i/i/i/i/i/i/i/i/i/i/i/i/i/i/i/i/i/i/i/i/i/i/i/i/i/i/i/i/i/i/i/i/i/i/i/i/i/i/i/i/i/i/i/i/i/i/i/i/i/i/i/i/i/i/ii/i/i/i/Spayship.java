@@ -17,6 +17,7 @@ public class Spayship extends JFrame {
 	    private final int Sizew = 100;
 	    private final int Sizeh = 100;
 	    
+	    private float v = 10;
 	    private float ypos = 50;
 	    
 	    private boolean isRunning = true;
@@ -62,18 +63,16 @@ public class Spayship extends JFrame {
 	        init();
 
 	        while(isRunning){
-	            //new loop, clock the start
+
 	            startFrame = System.currentTimeMillis();
-	            //calculate delta time
+
 	            dt = (float)(startFrame - lastFrame)/1000;
-	            //log the current time
+
 	            lastFrame = startFrame;
 
-	            //call update and draw methods
-	            new TAdapter();
+	            update();
 	            draw();
 
-	            //dynamic thread sleep, only sleep the time we need to cap the framerate
 	            rest = (1000/MAX_FPS) - (System.currentTimeMillis() - startFrame);
 	            if(rest >0){
 	                try{ Thread.sleep(rest); }
@@ -83,7 +82,15 @@ public class Spayship extends JFrame {
 
 	    }
 	    
-	    private void draw(){
+	    private void update() {
+	    	if(goingup = true) {
+	    		ypos += v;
+	    	}
+			if(goingdown = true) {
+				ypos -= v;
+			}
+		}
+		private void draw(){
 	    	
 	        Graphics2D g = (Graphics2D) buffer.getDrawGraphics();
 
