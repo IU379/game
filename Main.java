@@ -2,11 +2,8 @@ package src;
 
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Image;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -22,11 +19,7 @@ public class Main extends JPanel implements ActionListener
 	private final int B_WIDTH = 500;
 	private final int B_HEIGHT = 500;
 	private final int S_SIZE = 10;
-	private final int RAND_POS = 29;
-	private final int DELAY = 140;
-	
-	private int e_x;
-	private int e_y;
+
 	private int s;
 	
 	private boolean leftDirection = false;
@@ -39,7 +32,6 @@ public class Main extends JPanel implements ActionListener
 	private int y[] = new int [0];
 	
 	private Timer timer;
-	private Image e;
 	private Image si;
 	
 	public Main()
@@ -57,8 +49,6 @@ public class Main extends JPanel implements ActionListener
 		ImageIcon iid = new ImageIcon("1");
 		si = iid.getImage();
 		
-		ImageIcon idd = new ImageIcon("2");
-		e = idd.getImage();
 	}
 	private void initGame()
 	{
