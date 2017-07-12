@@ -13,7 +13,7 @@ public class Main extends JFrame implements Pins {
     private void initUI() {
 
         add(new Board());
-        setTitle("Space");
+        setTitle("Spayship");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(BOARD_WIDTH, BOARD_HEIGHT);
         setLocationRelativeTo(null);

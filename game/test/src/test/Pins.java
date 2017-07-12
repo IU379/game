@@ -3,8 +3,8 @@ package test;
 
 public interface Pins {
 
-    public static final int BOARD_WIDTH = 500;
-    public static final int BOARD_HEIGHT = 500;
+    public static final int BOARD_WIDTH = 800;
+    public static final int BOARD_HEIGHT = 800;
     public static final int GROUND = 0;
     public static final int BORDER_RIGHT = 30;
     public static final int BORDER_LEFT = 5;
