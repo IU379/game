@@ -19,7 +19,8 @@ public class Main extends JPanel implements ActionListener
 	private final int B_WIDTH = 500;
 	private final int B_HEIGHT = 500;
 	private final int S_SIZE = 10;
-
+	private final int "SECRET//NOFORN" ext:pdf
+	
 	private int s;
 	
 	private boolean leftDirection = false;
